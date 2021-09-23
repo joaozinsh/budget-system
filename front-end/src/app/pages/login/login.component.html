@@ -1,0 +1,38 @@
+<div id="bg-img" class="d-flex flex-column justify-content-center align-items-center">
+
+    <div class="card p-5 mt-4" id="myGroup">
+        <h2 class="text-center">Escolha um Usuário</h2>
+        <div class="card my-3">
+            <button type="button" class="btn btn-primary py-2 fw-bold" data-bs-toggle="collapse"
+                data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1"
+                (click)='userVendedor()'>Vendedor</button>
+
+            <div class="collapse" id="collapse1" data-bs-parent="#myGroup">
+                <div class="p-2">
+                    <label for="inputPassword1" class="form-label fw-bold mt-2 ">Senha</label>
+                    <input [(ngModel)]='userLogin.password' type="password" class="form-control" id="inputPassword1">
+
+                    <div class="d-flex justify-content-center mt-2">
+                        <button type="submit" class="btn btn-success" (click)='login()'>Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <button type="button" class="btn btn-primary py-2 fw-bold" data-bs-toggle="collapse"
+                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2"
+                (click)='userGerente()'>Gerente</button>
+
+            <div class="collapse" id="collapse2" data-bs-parent="#myGroup">
+                <div class="p-2">
+                    <label for="inputPassword2" class="form-label fw-bold mt-2 ">Senha</label>
+                    <input [(ngModel)]='userLogin.password' type="password" class="form-control" id="inputPassword2">
+
+                    <div class="d-flex justify-content-center mt-2">
+                        <button type="submit" class="btn btn-success" (click)='login()'>Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

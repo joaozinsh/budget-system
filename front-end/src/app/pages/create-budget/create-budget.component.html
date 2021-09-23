@@ -1,0 +1,96 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <button class="btn btn-primary mb-3" routerLink="/home">Voltar</button>
+    
+    <div class="card p-3">
+        <h2 class="text-center mb-4">Criação de Orçamentos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <label class="form-label fw-bold " for="validity">Validade em Dias</label>
+                    <input [(ngModel)]="budget.validity" class="form-control" type="number" min="0" id="validity">
+                </div>
+                <div>
+                    <label class="form-label fw-bold mt-3" for="clientName">Nome do Cliente</label>
+                    <input [(ngModel)]="budget.clientName" class="form-control" type="text" id="clientName">
+                </div>
+                <div>
+                    <label class="form-label fw-bold mt-3" for="clientAddress">Endereço do Cliente</label>
+                    <input [(ngModel)]="budget.clientAddress" class="form-control" type="text" id="clientAddress">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div>
+                    <label class="form-label fw-bold" for="comments">Observação (Opcional)</label>
+                    <textarea [(ngModel)]="budget.comments" value="" class="form-control" type="text" name="" id="comments"
+                        rows="5"></textarea>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <button *ngIf="budgetCreated == false" (click)="saveBuget()" class="btn btn-primary">Criar Orçamento</button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="budgetCreated == true" class="card my-3 p-3">
+        <h2 class="text-center mb-4">Adicionar Itens</h2>
+        <div class="row">
+            <div class="col">
+                <div>
+                    <input [(ngModel)]='budgetItem.name' id="name" type="text" class="form-control" placeholder="Nome do Produto">
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <input [(ngModel)]='budgetItem.quantityParts' if="" type="number" min="0" class="form-control"
+                        placeholder="Quantidade">
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <input [(ngModel)]='budgetItem.unitaryValue' type="number" min="0" class="form-control"
+                        placeholder="Valor Unitário">
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <input [(ngModel)]='budgetItem.percentDiscount' type="number" min="0" class="form-control"
+                        placeholder="Desconto (%)">
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <button (click)="saveBudgetItem()" class="btn btn-primary">Adicionar Item</button>
+                </div>
+            </div>
+        </div>
+
+
+        <table class="table mt-4 table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade Peças</th>
+                    <th>Valor Unitário</th>
+                    <th>Desconto (%)</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let item of budgetForListItems.items'>
+                    <td>{{item.name}}</td>
+                    <td>{{item.quantityParts}}</td>
+                    <td>{{item.unitaryValue}}</td>
+                    <td>{{item.percentDiscount}}</td>
+                    <td>{{item.subTotal}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-end mt-3">
+            <button (click)="clean()" class="btn btn-primary">Criar Novo Orçamento</button>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
