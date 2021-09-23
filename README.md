@@ -74,10 +74,10 @@ Para usar o projeto, siga estas etapas:
 Faça um clone do repositório
 
 ```
-git clone 
+git clone https://github.com/joaozinsh/budget-system.git
 ```
 
-Abra um terminal na pasta do projeto e digite:
+Abra um terminal na pasta back-end do projeto e digite:
 
 ​	Linux ou Windows (Git Bash):
 
@@ -107,7 +107,7 @@ Para acessar o banco de dados H2, acesse `http://localhost:8080/h2-console`
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-- ter instalado o `Angular CLI`
+- Ter instalado o `Angular CLI`
 
 - Para verificar, rode o seguinte comando em um terminal: `ng --version`
 
@@ -129,7 +129,13 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 Para usar o projeto, siga estas etapas:
 
-Abra um terminal na pasta do projeto e instale as dependências:
+Faça um clone do repositório
+
+```
+git clone https://github.com/joaozinsh/budget-system.git
+```
+
+Abra um terminal na pasta front-end do projeto e instale as dependências:
 
 ```
 npm install
