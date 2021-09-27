@@ -1,51 +1,55 @@
 # Sistema de Orçamentos (Budget System)
 
+# Sobre o projeto
+
 Sistema de orçamentos genérico para visualizar, criar, editar e apagar orçamentos, utilizando dois perfis de acesso (Vendedor e Gerente).
 
+## Imagens
 <table align=center>
   <tr>
     <td>
-      <a href="https://imgur.com/Et7xVoX"><img src="https://i.imgur.com/Et7xVoX.png" title="source: imgur.com" /></a>
+      <img src="https://i.imgur.com/Et7xVoX.png" title="source: imgur.com" />
     </td>
     <td>
-      <a href="https://imgur.com/0Wl7C5u"><img src="https://i.imgur.com/0Wl7C5u.png" title="source: imgur.com" /></a>
+      <img src="https://i.imgur.com/0Wl7C5u.png" title="source: imgur.com" />
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://imgur.com/EmrXZ8s"><img src="https://i.imgur.com/EmrXZ8s.png" title="source: imgur.com" /></a>
+      <img src="https://i.imgur.com/EmrXZ8s.png" title="source: imgur.com" />
     </td>
     <td>
-      <a href="https://imgur.com/R2yIrxv"><img src="https://i.imgur.com/R2yIrxv.png" title="source: imgur.com" /></a>
+      <img src="https://i.imgur.com/R2yIrxv.png" title="source: imgur.com" />
     </td>
   </tr>
-  
 </table>
 
 >Projeto desenvolvido como um teste para a empresa VarejOnline.
 
-<br>
+# Tecnologias utilizadas
 
-# Back-End
-
-## Tecnologias
+## Back-End
 
 * Java
-
 * Spring Boot
-
-  Dependências do Spring Boot:
-
     * Spring Web
     * Spring Boot DevTools
     * Spring Data JPA
     * H2 Database
     * Validation
+* Maven
 
-* Banco de Dados H2
+## Front-End
 
+* HTML / CSS / TypeScript
+* Angular
+* Bootstrap
 
-## Pré-requisitos
+# Como executar o projeto
+
+## Back-End
+
+### Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
@@ -57,7 +61,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
   Linux:
 
-  ```
+  ```bash
   sudo apt install openjdk-11-jdk
   ```
 
@@ -67,13 +71,13 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
   https://www.oracle.com/java/technologies/downloads/#java11-windows
   ```
 
-## Usando
+### Usando
 
 Para usar o projeto, siga estas etapas:
 
 Faça um clone do repositório
 
-```
+```bash
 git clone https://github.com/joaozinsh/budget-system.git
 ```
 
@@ -81,29 +85,21 @@ Abra um terminal na pasta back-end do projeto e digite:
 
 ​	Linux ou Windows (Git Bash):
 
-```
+```bash
 ./mvnw spring-boot:run
 ```
 
 ​	Windows (CMD):
 
-```
+```bash
 ./mvnw.cmd spring-boot:run
 ```
 
 Para acessar o banco de dados H2, acesse `http://localhost:8080/h2-console` 
 
-<br>
+## Front-End
 
-# Front-End
-
-## Tecnologias
-
-* HTML / CSS / TypeScript
-* Angular
-* Bootstrap
-
-## Pré-requisitos
+### Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
@@ -121,28 +117,28 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
   Feito isso, instale o `Angular CLI`
 
-  ```
+  ```bash
   npm install -g @angular/cli
   ```
-
-## Usando
+  
+### Usando
 
 Para usar o projeto, siga estas etapas:
 
 Faça um clone do repositório
 
-```
+```bash
 git clone https://github.com/joaozinsh/budget-system.git
 ```
 
 Abra um terminal na pasta front-end do projeto e instale as dependências:
 
-```
+```bash
 npm install
 ```
 
 Feito isso, rode o projeto com:
-```
+```bash
 ng serve
 ```
 
